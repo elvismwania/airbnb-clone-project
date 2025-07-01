@@ -169,3 +169,32 @@ This section outlines the core entities of our relational database (PostgreSQL) 
     * **Relationships:**
         * Belongs to one **User** (reviewer).
         * Applies to one **Property**.
+     
+   ---
+
+## Feature Breakdown ✨
+
+This section provides a detailed look at the core functionalities of the AirBnB Clone backend, highlighting how each feature contributes to the overall objective of creating a robust booking platform.
+
+1.  **API Documentation**
+    * **Description:** Utilizing OpenAPI Standard and integrating with Django REST Framework and GraphQL, this feature ensures that all backend APIs are thoroughly documented. Clear documentation is crucial for frontend developers and other consumers to easily understand and integrate with the backend services, promoting efficient development and collaboration.
+
+2.  **User Authentication & Management**
+    * **Description:** This feature provides a secure system for user registration, login, and profile management. It allows users to create accounts, authenticate themselves, and manage their personal information, forming the essential foundation for personalized interactions within the platform.
+
+3.  **Property Management**
+    * **Description:** Enables hosts to create, update, retrieve, and delete property listings. This is a core functionality that allows hosts to showcase their available accommodations, providing guests with a diverse range of properties to browse and select from.
+
+4.  **Booking System**
+    * **Description:** Facilitates the reservation of properties by guests, managing all aspects from checking availability to confirming bookings. This feature is central to the platform's purpose, allowing users to secure their desired stays and hosts to manage their property's occupancy effectively.
+
+5.  **Payment Processing**
+    * **Description:** Integrates a system to securely handle financial transactions related to bookings. This feature ensures that payments from guests to hosts are processed smoothly and recorded accurately, completing the booking cycle and enabling the commercial aspect of the platform.
+
+6.  **Review System**
+    * **Description:** Allows users to provide feedback and ratings for properties they have stayed in. This system builds trust and transparency within the community, helping future guests make informed decisions and enabling hosts to improve their offerings based on valuable feedback.
+
+7.  **Database Optimizations**
+    * **Description:** Implements strategies like indexing and caching to ensure efficient data retrieval and storage. This crucial backend feature significantly improves the application's performance, reducing load times and enhancing the overall responsiveness and user experience.
+
+---
