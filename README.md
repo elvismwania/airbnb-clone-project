@@ -197,4 +197,31 @@ This section provides a detailed look at the core functionalities of the AirBnB 
 7.  **Database Optimizations**
     * **Description:** Implements strategies like indexing and caching to ensure efficient data retrieval and storage. This crucial backend feature significantly improves the application's performance, reducing load times and enhancing the overall responsiveness and user experience.
 
+
 ---
+
+## API Security Overview 🔒
+
+Securing the backend APIs is paramount to protect sensitive data, maintain user trust, and ensure the integrity and availability of the AirBnB Clone platform. We will implement robust security measures to safeguard against various threats.
+
+### Key Security Measures:
+
+1.  **Authentication:**
+    * **Description:** The process of verifying the identity of a user or service attempting to access the API. For this project, we will likely use **Token-based Authentication** (e.g., JWT - JSON Web Tokens or Django REST Framework's built-in TokenAuthentication) to secure endpoints, ensuring that only legitimate and identified users can make requests.
+    * **Crucial for:** Protecting user accounts from unauthorized access, ensuring that only authenticated users can view or modify their own data, and preventing impersonation.
+
+2.  **Authorization:**
+    * **Description:** After a user is authenticated, authorization determines what specific actions they are permitted to perform and which resources they can access. This involves defining roles and permissions (e.g., guest vs. host) to enforce granular access control.
+    * **Crucial for:** Preventing unauthorized data manipulation (e.g., a guest trying to edit another user's property, or a user accessing booking details they are not part of). It ensures that hosts can only manage their own listings and guests can only view their own bookings.
+
+3.  **Rate Limiting / Throttling:**
+    * **Description:** Controls the number of requests a client can make to the API within a specified time frame. This prevents abuse, such as brute-force attacks on login endpoints or denial-of-service (DoS) attacks that could overwhelm the server.
+    * **Crucial for:** Maintaining the stability and availability of the service by preventing malicious or excessive requests from a single source. It protects against credential stuffing and ensures fair usage for all legitimate users.
+
+4.  **Input Validation and Sanitization:**
+    * **Description:** Rigorously checking and cleaning all incoming data from API requests to ensure it conforms to expected formats and does not contain malicious code or unexpected values. This includes validating data types, lengths, and patterns, and stripping out harmful characters.
+    * **Crucial for:** Preventing various injection attacks (e.g., SQL Injection, Cross-Site Scripting - XSS) that could compromise the database or application integrity. It ensures that only valid and safe data is processed and stored.
+
+5.  **HTTPS (SSL/TLS Encryption):**
+    * **Description:** All communication between clients and the API will be encrypted using HTTPS. This establishes a secure connection over which data is transmitted, making it unreadable to eavesdroppers.
+    * **Crucial for:** Protecting sensitive data in transit, especially user credentials, payment information
