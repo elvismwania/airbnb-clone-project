@@ -93,3 +93,79 @@ This section provides a deeper look into the core technologies driving the AirBn
 ---
 
 ---
+
+## Database Design Overview 🗄️
+
+This section outlines the core entities of our relational database (PostgreSQL) and describes their key attributes and relationships, forming the backbone of the AirBnB Clone's data management.
+
+### Key Entities and Their Relationships:
+
+1.  **User**
+    * **Description:** Represents an individual user of the platform, who can be both a guest making bookings and a host listing properties.
+    * **Important Fields:**
+        * `user_id` (Primary Key)
+        * `username` (Unique)
+        * `email` (Unique)
+        * `password_hash`
+        * `registration_date`
+    * **Relationships:**
+        * One User can have many **Properties** (as a host).
+        * One User can make many **Bookings** (as a guest).
+        * One User can leave many **Reviews**.
+        * One User can initiate many **Payments**.
+
+2.  **Property**
+    * **Description:** Represents a listing available for rent on the platform.
+    * **Important Fields:**
+        * `property_id` (Primary Key)
+        * `host_id` (Foreign Key to User)
+        * `title`
+        * `description`
+        * `location`
+        * `price_per_night`
+        * `availability_status`
+    * **Relationships:**
+        * One Property can have many **Bookings**.
+        * One Property can receive many **Reviews**.
+        * Belongs to one **User** (host).
+
+3.  **Booking**
+    * **Description:** Represents a reservation made by a guest for a specific property.
+    * **Important Fields:**
+        * `booking_id` (Primary Key)
+        * `guest_id` (Foreign Key to User)
+        * `property_id` (Foreign Key to Property)
+        * `check_in_date`
+        * `check_out_date`
+        * `total_price`
+        * `status` (e.g., pending, confirmed, cancelled)
+    * **Relationships:**
+        * Belongs to one **User** (guest).
+        * Belongs to one **Property**.
+        * Can be associated with one **Payment**.
+
+4.  **Payment**
+    * **Description:** Records transaction details for bookings.
+    * **Important Fields:**
+        * `payment_id` (Primary Key)
+        * `booking_id` (Foreign Key to Booking, Unique)
+        * `amount`
+        * `payment_date`
+        * `status` (e.g., successful, failed, refunded)
+        * `transaction_reference`
+    * **Relationships:**
+        * Corresponds to one **Booking**.
+        * Associated with one **User** (who made the booking).
+
+5.  **Review**
+    * **Description:** Allows users to provide feedback and ratings for properties after their stay.
+    * **Important Fields:**
+        * `review_id` (Primary Key)
+        * `reviewer_id` (Foreign Key to User)
+        * `property_id` (Foreign Key to Property)
+        * `rating` (e.g., 1-5 stars)
+        * `comment`
+        * `review_date`
+    * **Relationships:**
+        * Belongs to one **User** (reviewer).
+        * Applies to one **Property**.
