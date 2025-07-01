@@ -38,4 +38,28 @@ To achieve the project goals, we'll be utilizing the following technologies:
 * **CI/CD:** **GitHub Actions** (or similar CI/CD platforms for automated testing and deployment)
 * **Version Control:** **Git** & **GitHub**
 
+  ---
+
+## Team Roles 👥
+
+For the successful execution of the AirBnB Clone project, the team will comprise the following key roles, each with distinct responsibilities:
+
+* **Backend Developer**
+    * **Description:** Primarily responsible for the server-side logic, database interactions, and API development. They ensure the application's core functionality and data flow are robust and efficient.
+    * **Responsibilities in this project:** Implementing API endpoints (for users, properties, bookings, payments, reviews), designing and implementing database schemas, writing business logic, ensuring secure data handling, and integrating with other backend services.
+
+* **Database Administrator (DBA)**
+    * **Description:** Manages the design, implementation, maintenance, and performance of the project's databases. They ensure data integrity, availability, and optimal retrieval.
+    * **Responsibilities in this project:** Designing the PostgreSQL database structure, implementing indexing strategies for fast data retrieval, optimizing database queries, managing database migrations, ensuring data integrity, and setting up caching mechanisms (e.g., with Redis).
+
+* **DevOps Engineer**
+    * **Description:** Focuses on bridging the gap between development and operations. They are responsible for setting up and maintaining the infrastructure, automation, and deployment pipelines.
+    * **Responsibilities in this project:** Containerizing the application using Docker, setting up and managing CI/CD pipelines (e.g., with GitHub Actions) for automated testing and deployment, monitoring backend service performance, ensuring scalability, and managing the deployment environment.
+
+* **QA Engineer (Quality Assurance Engineer)**
+    * **Description:** Ensures the quality of the software by designing and executing tests, identifying bugs, and verifying that the application meets all specified requirements and standards.
+    * **Responsibilities in this project:** Developing and executing test plans for all API endpoints, performing functional and integration testing of user, property, booking, payment, and review systems, reporting and tracking bugs, and ensuring the overall quality and reliability of the backend functionalities.
+
+---
+
 ---
