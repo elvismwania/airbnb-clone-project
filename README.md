@@ -62,4 +62,34 @@ For the successful execution of the AirBnB Clone project, the team will comprise
 
 ---
 
+## Technology Stack Overview ⚙️
+
+This section provides a deeper look into the core technologies driving the AirBnB Clone backend, explaining their specific roles and contributions to the project's success.
+
+* **Django**
+    * **Purpose:** Serves as the high-level Python web framework for building the foundational RESTful API. It provides the structure and many built-in functionalities required for rapid and secure backend development, handling routing, ORM, and more.
+
+* **Django REST Framework (DRF)**
+    * **Purpose:** Extends Django to provide a powerful and flexible toolkit for building Web APIs. DRF is crucial for creating the comprehensive RESTful API endpoints for managing users, properties, bookings, payments, and reviews, facilitating efficient CRUD operations.
+
+* **PostgreSQL**
+    * **Purpose:** A powerful, open-source relational database system used for persistent data storage. PostgreSQL will house all project data, including user information, property details, booking records, payment transactions, and reviews, ensuring data integrity and reliability.
+
+* **GraphQL**
+    * **Purpose:** Offers a flexible and efficient query language for clients to interact with the backend API. It allows clients to request exactly the data they need, reducing over-fetching and under-fetching, and providing a single endpoint for diverse data requirements.
+
+* **Celery**
+    * **Purpose:** Used for handling asynchronous tasks, crucial for improving the responsiveness of the application. It will be employed for background processes such as sending email notifications (e.g., booking confirmations), processing payments, or generating reports, without blocking the main application thread.
+
+* **Redis**
+    * **Purpose:** An in-memory data structure store, used primarily for caching and session management. Redis will enhance application performance by storing frequently accessed data in cache, reducing database load, and will also manage user sessions for improved authentication flow.
+
+* **Docker**
+    * **Purpose:** A containerization platform that packages the application and all its dependencies into a standardized unit. Docker ensures consistent development, testing, and production environments, simplifying deployment and scaling.
+
+* **CI/CD Pipelines (e.g., GitHub Actions)**
+    * **Purpose:** Automates the continuous integration and continuous deployment process. These pipelines will automate testing, building, and deploying code changes to ensure high-quality software, rapid iterations, and minimized errors during the release cycle.
+
+---
+
 ---
